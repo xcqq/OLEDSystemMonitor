@@ -1,0 +1,6 @@
+[submodule "u8g2"]
+	path = u8g2
+	url = git://github.com/olikraus/u8g2
+[submodule "WiringPi"]
+	path = WiringPi
+	url = https://github.com/WiringPi/WiringPi.git
