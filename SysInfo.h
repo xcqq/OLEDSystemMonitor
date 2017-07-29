@@ -10,16 +10,16 @@
 using namespace std;
 struct cpuState
 {
-    uint64_t user = 0;
-    uint64_t nice = 0;
-    uint64_t system = 0;
-    uint64_t idle = 0;
-    uint64_t iowait = 0;
-    uint64_t irq = 0;
-    uint64_t softirq = 0;
-    uint64_t stealstolen = 0;
-    uint64_t guest = 0;
-    uint64_t total = 0;
+    unsigned long user = 0;
+    unsigned long nice = 0;
+    unsigned long system = 0;
+    unsigned long idle = 0;
+    unsigned long iowait = 0;
+    unsigned long irq = 0;
+    unsigned long softirq = 0;
+    unsigned long stealstolen = 0;
+    unsigned long guest = 0;
+    unsigned long total = 0;
 };
 class SysInfo {
 
