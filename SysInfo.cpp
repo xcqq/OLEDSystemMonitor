@@ -69,7 +69,30 @@ float SysInfo::getMemUsage()
 
 float SysInfo::getDiskUsage()
 {
+    //todo return disk usage, need to support 2 disks
     return 0;
+}
+
+float SysInfo::getNetworkUpSpeed()
+{
+    //todo return up speed
+    return 0;
+}
+
+float SysInfo::getNetworkDownSpeed()
+{
+    //todo return down speed
+    return 0;
+}
+
+void SysInfo::setDiskPath1(string diskPath)
+{
+    mDiskPath1=diskPath;
+}
+
+void SysInfo::setDiskPath2(string diskPath)
+{
+    mDiskPath2=diskPath;
 }
 
 SysInfo::~SysInfo()

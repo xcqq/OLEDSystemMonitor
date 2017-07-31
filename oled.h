@@ -6,6 +6,7 @@
 #define OLED_H
 
 #include "u8x8.h"
+#include "u8g2.h"
 #include "wiringPi.h"
 #include "wiringPiSPI.h"
 
@@ -23,6 +24,7 @@ public:
     void setNetworkDownSpeed(float networkDownSpeed);
     void refreshScreen();
     void clearScreen();
+    void showLogo(unsigned char *logo);
 
 
 private:
@@ -30,7 +32,10 @@ private:
     float mMemUsage = 0;
     float mNetworkUpSpeed = 0;
     float mNetworkDownSpeed = 0;
-    u8x8_t mU8g2;
+    u8x8_t mU8x8;
+    u8g2_t mU8g2;
+
+
 
 };
 

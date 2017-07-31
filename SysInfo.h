@@ -28,18 +28,33 @@ public:
     ~SysInfo();
 
     float getCpuUsage();
-
     float getMemUsage();
-
     float getDiskUsage();
+    float getNetworkUpSpeed();
+    float getNetworkDownSpeed();
 
+    void setDiskPath1(string diskPath);
+    void setDiskPath2(string diskPath);
 
 private:
     timespec mSysTicksPre;
     ifstream mCpuInfo;
     ifstream mMemInfo;
+    ifstream mNetWorkInfo;
+
+    struct cpuState cpuStatePre;
+
+    float mCpuUsage = 0;
+    float mMemUsage = 0;
+    float mDiskUsage = 0;
+    float mNetworkUpSpeed = 0;
+    float mNetworkDownSpeed = 0;
+
+    string mDiskPath1;
+    string mDiskPath2;
 
     int mParseCpuUsage(string cpuID, struct cpuState &CpuStateCurr);
+    int mParseDiskUsage(string diskPath);
     int split(const string& str, vector<string>& ret_, string sep = ",")
     {
         if (str.empty())
@@ -74,11 +89,7 @@ private:
         return 0;
     }
 
-    struct cpuState cpuStatePre;
 
-    float mCpuUsage = 0;
-    float mMemUsage = 0;
-    float mDiskUsage = 0;
 
 
 };
